@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: var(--background1, white);
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./fonts/ubuntu-regular-webfont.woff2') format('woff2'),
+    url('./fonts/ubuntu-regular-webfont.woff') format('woff');
+  font-style: normal;
+}
+
+:root {
+  --background1: rgb(40, 32, 63);
+  --background2: rgb(255, 255, 255);
+  --text1: rgb(0, 0, 0);
+  --text2: rgb(0, 0, 0);
+  --text-footer: rgb(187, 175, 212);
+  /* font-size: 16px; */ /* Disables browser font size setting */
+}
+
+body {
+  display: grid;
+  grid-template: 1fr 4fr 40px / 1fr;
+}
+
+footer {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+  font-size: 1rem;
+  color: var(--text-footer);
+}
