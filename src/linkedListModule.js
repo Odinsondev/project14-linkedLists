@@ -174,6 +174,9 @@ function createLinkedList() {
     if (list.head === null) {
       console.log('Empty linked list');
       return null;
+    } else if (index === 1) {
+      list.prepend(data);
+      return;
     } else {
       let currentNode = list.head; //starting point for the for loop
       let linkedListLength = list.size();
@@ -210,6 +213,9 @@ function createLinkedList() {
     if (list.head === null) {
       console.log('Empty linked list');
       return null;
+    } else if (index === 1) {
+      list.head = list.head.nextNode;
+      return;
     } else {
       let currentNode = list.head; //starting point for the for loop
       let linkedListLength = list.size();
