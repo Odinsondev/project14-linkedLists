@@ -213,9 +213,16 @@ function createLinkedList() {
     if (list.head === null) {
       console.log('Empty linked list');
       return null;
+      //if removing the only node
+    } else if (index === 1 && index === list.size()) {
+      list.pop();
+      //if removing the first node
     } else if (index === 1) {
       list.head = list.head.nextNode;
-      return;
+      list.updateIndex();
+      //if removing the last node
+    } else if (index === list.size()) {
+      list.pop();
     } else {
       let currentNode = list.head; //starting point for the for loop
       let linkedListLength = list.size();
