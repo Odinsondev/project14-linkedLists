@@ -25,6 +25,25 @@ body {
   /* font-size: 16px; */ /* Disables browser font size setting */
 }
 
+header {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--text-footer);
+}
+
+#container {
+  text-align: center;
+}
+
+#title {
+  font-size: 3rem;
+  margin: 0 0 0.5rem 0;
+}
+
 body {
   display: grid;
   grid-template: 1fr 2fr 2fr 40px / 1fr 2fr 1fr;
